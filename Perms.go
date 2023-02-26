@@ -95,7 +95,8 @@ func (x PermissionsManager) check(body string) {
 	for msg := range msgs {
 		// log.Printf("Received: '%s' with '%s' - '%s'", msg.Body, msg.CorrelationId, corrId)
 		if corrId.String() == msg.CorrelationId {
-			log.Printf("Correlated: '%s'", msg.Body)
+			// log.Printf("Correlated: '%s'", msg.Body)
+			log.Printf("Recieved '%s': '%s'", body, msg.Body)
 
 			// msg.Ack(true)
 			break
