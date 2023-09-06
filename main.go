@@ -25,7 +25,8 @@ func main() {
 		"ef70a148-d046-4a88-815a-d8142f15839b|bird.post.delete",
 	}
 
-	perms := makePermissionsManager("172.17.0.2", 5672, "user", "pass")
+	perms := makePermissionsManager("172.17.0.2", 5672, "permdev", "iP1Zs5vxgqE9sGF0")
+	// perms := makePermissionsManager("172.17.0.2", 5672, "guest", "guest")
 	defer perms.Close()
 
 	for i := 0; i < 10; i++ {
